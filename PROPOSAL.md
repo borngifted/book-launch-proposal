@@ -165,7 +165,15 @@ Everything in Tier 2, plus:
 - 60 days of post-launch management (posting, list nurture, ads monitoring)
 
 **Pass-through costs** (paid at cost, ~$250–$500): ISBNs, copyright filing, barcode, state imprint fee.
-**Payment terms:** 50% to begin, 50% at platform launch. Pass-throughs invoiced at cost with receipts.
+**Payment terms — 15% down + biweekly payments:** Start with just 15% down and work begins immediately. The balance is split into 6 equal payments billed every two weeks:
+
+| Tier | Total | 15% Down | 6 Biweekly Payments |
+|---|---|---|---|
+| Tier 1 · Publish Ready | $2,450 | $368 | $347 every 2 weeks |
+| Tier 2 · Author Platform ⭐ | $4,950 | $743 | $701 every 2 weeks |
+| Tier 3 · Full Launch Suite | $8,950 | $1,343 | $1,268 every 2 weeks |
+
+**The faster the payments, the faster the launch.** Every phase can be delivered sooner than the standard 6-week timeline — the schedule moves as fast as the payment plan does. Staying committed to the biweekly payments keeps the team booked on the project continuously; paying ahead of schedule accelerates delivery to match. Missed payments pause work until the plan is current. Pass-throughs invoiced at cost with receipts.
 
 ### Optional Add-ons
 | Add-on | Price |
@@ -181,7 +189,7 @@ Everything in Tier 2, plus:
 ## Next Steps
 
 1. **Choose your tier** (Tier 2 recommended for platform + CRM goals)
-2. Sign proposal + 50% deposit → project kickoff within 3 business days
+2. Sign proposal + 15% down → project kickoff within 3 business days; biweekly plan starts two weeks later
 3. Kickoff call: manuscript status, imprint name, domain name, brand assets
 4. Week 1: registrations begin immediately
 
