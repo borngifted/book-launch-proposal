@@ -185,7 +185,7 @@ Everything in Tier 2, plus:
 3. Kickoff call: manuscript status, imprint name, domain name, brand assets
 4. Week 1: registrations begin immediately
 
-**Work Official LLC** · digi2uai@gmail.com
+**Work Official LLC** · theaden10@gmail.com
 
 ---
 
