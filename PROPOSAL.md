@@ -4,6 +4,7 @@
 **Prepared for:** [Client Name]
 **Date:** July 28, 2026
 **Project:** Amazon (KDP) Book Publication + Author Showcase Platform + Social & CRM Integration
+**Live proposal:** https://borngifted.github.io/book-launch-proposal/ · **Platform demo:** https://borngifted.github.io/author-platform-demo/
 
 ---
 
