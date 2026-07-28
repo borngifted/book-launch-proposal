@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Book Publishing &amp; Author Platform Launch — Work Official LLC</title>
+<style>
+  :root{
+    --ink:#1a1614; --paper:#faf7f2; --card:#ffffff; --accent:#b5542a; --accent-dark:#8f3f1d;
+    --gold:#c9a24b; --muted:#6b625a; --line:#e6ddd2; --green:#3d6b4f;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:Georgia,'Times New Roman',serif;background:var(--paper);color:var(--ink);line-height:1.65}
+  .sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px}
+
+  header{background:var(--ink);color:var(--paper);padding:72px 0 64px;text-align:center}
+  header .kicker{font-family:-apple-system,BlinkMacSystemFont,sans-serif;text-transform:uppercase;letter-spacing:.25em;font-size:.75rem;color:var(--gold);margin-bottom:20px}
+  header h1{font-size:clamp(1.9rem,5vw,3rem);font-weight:400;line-height:1.2;max-width:720px;margin:0 auto 20px}
+  header p{color:#c8beb4;max-width:560px;margin:0 auto;font-style:italic}
+  header .meta{margin-top:32px;font-family:-apple-system,sans-serif;font-size:.85rem;color:#a89c90;letter-spacing:.05em}
+
+  section{padding:56px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:1.7rem;font-weight:400;margin-bottom:8px}
+  h2::after{content:"";display:block;width:56px;height:3px;background:var(--accent);margin-top:12px}
+  .lede{color:var(--muted);margin:20px 0 28px;font-size:1.05rem}
+  h3{font-family:-apple-system,sans-serif;font-size:1.05rem;margin:32px 0 12px;color:var(--accent-dark)}
+
+  ul.goals{list-style:none;margin-top:24px}
+  ul.goals li{padding:14px 0 14px 40px;position:relative;border-bottom:1px dotted var(--line);font-size:1.05rem}
+  ul.goals li::before{content:"✦";position:absolute;left:8px;color:var(--accent)}
+
+  .tablewrap{overflow-x:auto;margin:16px 0}
+  table{width:100%;border-collapse:collapse;font-family:-apple-system,sans-serif;font-size:.9rem;background:var(--card)}
+  th{background:var(--ink);color:var(--paper);text-align:left;padding:10px 14px;font-weight:600;white-space:nowrap}
+  td{padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  td.cost{white-space:nowrap;color:var(--green);font-weight:600}
+  .free{color:var(--green);font-weight:600}
+
+  .phases{display:grid;gap:16px;margin-top:24px}
+  .phase{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);padding:20px 24px;border-radius:0 8px 8px 0}
+  .phase .tag{font-family:-apple-system,sans-serif;font-size:.72rem;text-transform:uppercase;letter-spacing:.15em;color:var(--accent);margin-bottom:6px}
+  .phase h4{font-family:-apple-system,sans-serif;font-size:1.05rem;margin-bottom:8px}
+  .phase ul{margin:8px 0 0 18px;font-size:.95rem;color:#3d3733}
+  .phase li{margin:4px 0}
+
+  .tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:28px}
+  .tier{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:28px 24px;display:flex;flex-direction:column;position:relative}
+  .tier.featured{border:2px solid var(--accent);box-shadow:0 8px 30px rgba(181,84,42,.15)}
+  .tier .badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;font-family:-apple-system,sans-serif;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:4px 14px;border-radius:20px;white-space:nowrap}
+  .tier h4{font-family:-apple-system,sans-serif;font-size:1.05rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+  .tier .price{font-size:2.2rem;margin:10px 0 4px;color:var(--ink)}
+  .tier .tagline{font-style:italic;color:var(--muted);font-size:.9rem;margin-bottom:16px}
+  .tier ul{list-style:none;font-family:-apple-system,sans-serif;font-size:.87rem;flex:1}
+  .tier li{padding:7px 0 7px 24px;position:relative;border-bottom:1px dotted var(--line)}
+  .tier li::before{content:"✓";position:absolute;left:2px;color:var(--green);font-weight:700}
+  .tier li.plus::before{content:"+";color:var(--accent);font-size:1.05rem}
+
+  .note{background:#f3ece1;border:1px solid var(--line);border-radius:8px;padding:16px 20px;font-family:-apple-system,sans-serif;font-size:.88rem;color:#4d443c;margin-top:24px}
+
+  .steps{counter-reset:step;margin-top:24px}
+  .steps li{list-style:none;padding:16px 0 16px 56px;position:relative;border-bottom:1px dotted var(--line);font-size:1.02rem}
+  .steps li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:12px;width:36px;height:36px;border-radius:50%;background:var(--ink);color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:-apple-system,sans-serif;font-weight:700}
+
+  footer{background:var(--ink);color:#a89c90;text-align:center;padding:48px 24px;font-family:-apple-system,sans-serif;font-size:.85rem}
+  footer .brand{color:var(--paper);font-size:1.1rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px}
+  footer a{color:var(--gold);text-decoration:none}
+  @media(max-width:640px){section{padding:40px 0}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="kicker">Work Official LLC · Client Proposal</div>
+  <h1>Book Publishing &amp; Author Platform Launch</h1>
+  <p>From manuscript to a live Amazon listing, an author platform you own, and a reader engine connected from day one.</p>
+  <div class="meta">Prepared for [Client Name] &nbsp;·&nbsp; July 2026</div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Executive Summary</h2>
+    <p class="lede">You've written a book. We handle everything between the manuscript and a professional, revenue-ready launch: every registration required to publish legally and distribute widely, a full Amazon KDP publication, and a custom author platform that showcases the book, links every store it sells in, feeds your social channels, and captures every reader into a CRM you own.</p>
+    <p>The result: your book live on Amazon and major retailers, an owned web presence that converts visitors into buyers and subscribers, and a marketing engine connected from day one — not bolted on after launch.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Your Goals</h2>
+    <ul class="goals">
+      <li><strong>Publish on Amazon</strong> — Kindle eBook + paperback (hardcover optional), done correctly the first time.</li>
+      <li><strong>Every registration secured</strong> — ISBN, copyright, Library of Congress, publishing imprint — protected and store-ready everywhere.</li>
+      <li><strong>Own a platform</strong> — a showcase website tying together every retailer the book sells on.</li>
+      <li><strong>All social media connected</strong> — content drives traffic to the platform and the buy links.</li>
+      <li><strong>Readers captured in a CRM</strong> — for launch, reviews, and every future book.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Registrations &amp; Accounts Roadmap</h2>
+    <p class="lede">Everything required to publish, in order. We handle setup and filing concierge-style; government and registry fees are passed through at cost.</p>
+
+    <h3>Required to Publish</h3>
+    <div class="tablewrap"><table>
+      <tr><th>Registration</th><th>Where</th><th>2026 Cost</th><th>Notes</th></tr>
+      <tr><td><strong>Amazon KDP account</strong></td><td>kdp.amazon.com</td><td class="cost">Free</td><td>Tax interview (W-9) + royalty banking</td></tr>
+      <tr><td><strong>ISBN</strong> (one per format)</td><td>Bowker</td><td class="cost">$125 / $295 for 10</td><td>Own ISBNs recommended — required for wide distribution under your imprint</td></tr>
+      <tr><td><strong>U.S. Copyright</strong></td><td>copyright.gov</td><td class="cost">$45–$65</td><td>Fee increase proposed fall 2026 — file early</td></tr>
+      <tr><td><strong>LCCN / PCN</strong></td><td>Library of Congress</td><td class="cost">Free</td><td>Apply <em>before</em> publication; mail one copy after release</td></tr>
+      <tr><td><strong>Barcode</strong> (print)</td><td>Bowker / KDP</td><td class="cost">$0–$25</td><td>KDP generates one free on the cover</td></tr>
+    </table></div>
+
+    <h3>Recommended — Publishing Business Foundation</h3>
+    <div class="tablewrap"><table>
+      <tr><th>Registration</th><th>Where</th><th>Cost</th><th>Notes</th></tr>
+      <tr><td><strong>Publishing imprint</strong> (LLC/DBA)</td><td>State filing</td><td class="cost">~$50–$150</td><td>Books publish under your imprint, not your personal name</td></tr>
+      <tr><td><strong>EIN</strong></td><td>IRS</td><td class="cost">Free</td><td>For the imprint's taxes and banking</td></tr>
+      <tr><td><strong>Amazon Author Central</strong></td><td>author.amazon.com</td><td class="cost">Free</td><td>Author page linking all your titles</td></tr>
+      <tr><td><strong>Goodreads Author</strong></td><td>goodreads.com</td><td class="cost">Free</td><td>Claim the book, run giveaways</td></tr>
+      <tr><td><strong>BookBub Author</strong></td><td>bookbub.com</td><td class="cost">Free</td><td>Deal alerts + follower base</td></tr>
+    </table></div>
+
+    <h3>Wide Distribution — Beyond Amazon</h3>
+    <div class="tablewrap"><table>
+      <tr><th>Account</th><th>Reaches</th><th>Cost</th></tr>
+      <tr><td><strong>IngramSpark</strong></td><td>Bookstores, libraries, 40,000+ retailers (print)</td><td class="cost">Free setup</td></tr>
+      <tr><td><strong>Draft2Digital</strong></td><td>Apple Books, Kobo, Barnes &amp; Noble, libraries (eBook)</td><td class="cost">Revenue share</td></tr>
+      <tr><td><strong>Google Play Books</strong></td><td>Google ecosystem</td><td class="cost">Free</td></tr>
+      <tr><td><strong>ACX / Audible</strong> (optional)</td><td>Audiobook market</td><td class="cost">Revenue share</td></tr>
+    </table></div>
+
+    <div class="note"><strong>Estimated total pass-through registration cost: ~$250–$500</strong> depending on formats and state fees. Invoiced at cost with receipts.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Scope of Work &amp; Timeline</h2>
+    <div class="phases">
+      <div class="phase">
+        <div class="tag">Phase 1 · Weeks 1–2</div>
+        <h4>Registrations &amp; Publishing Setup</h4>
+        <ul>
+          <li>File all required registrations: ISBN block, copyright, LCCN, barcode</li>
+          <li>Form publishing imprint + EIN (if selected)</li>
+          <li>KDP account fully configured: tax interview, royalty banking, publisher profile</li>
+          <li>Author Central, Goodreads, BookBub profiles live</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <div class="tag">Phase 2 · Weeks 2–4</div>
+        <h4>Book Publication</h4>
+        <ul>
+          <li>Interior formatting coordination (eBook + print-ready PDF)</li>
+          <li>Cover spec validation for KDP + Ingram (spine, bleed)</li>
+          <li>Metadata optimization: keywords, categories, HTML book description</li>
+          <li>Pricing strategy across formats — upload, proof, <strong>publish on Amazon</strong></li>
+        </ul>
+      </div>
+      <div class="phase">
+        <div class="tag">Phase 3 · Weeks 3–6</div>
+        <h4>Author Platform Website</h4>
+        <ul>
+          <li>Custom showcase site: hero, sample chapter, author bio, press kit</li>
+          <li><strong>Buy-Now hub</strong> — every retailer, one universal link</li>
+          <li>Email capture wired to CRM (sample-chapter opt-in)</li>
+          <li>SEO + Open Graph + schema.org Book markup; custom domain on fast, free hosting</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <div class="tag">Phase 4 · Weeks 5–6</div>
+        <h4>Social &amp; CRM Engine</h4>
+        <ul>
+          <li>All social profiles connected and brand-standardized</li>
+          <li>Scheduling + analytics dashboard configured</li>
+          <li>CRM: reader list, tags, signup automation</li>
+          <li>3 email automations: welcome, launch announcement, review request</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note">Copyright and LCCN confirmations arrive on government timelines (a copyright certificate can take months, but protection dates from filing). Project handoff includes all logins, assets, and a 30-day launch playbook.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Investment</h2>
+    <div class="tiers">
+      <div class="tier">
+        <h4>Tier 1 · Publish Ready</h4>
+        <div class="price">$2,450</div>
+        <div class="tagline">The book, live on Amazon, done right.</div>
+        <ul>
+          <li>All required registrations filed</li>
+          <li>KDP setup + full publication (eBook + paperback)</li>
+          <li>Metadata, keyword &amp; category optimization</li>
+          <li>One-page showcase site + buy links + email capture</li>
+          <li>Author Central + Goodreads setup</li>
+        </ul>
+      </div>
+      <div class="tier featured">
+        <div class="badge">Recommended</div>
+        <h4>Tier 2 · Author Platform</h4>
+        <div class="price">$4,950</div>
+        <div class="tagline">Everything in Tier 1, plus the platform.</div>
+        <ul>
+          <li>Everything in Publish Ready</li>
+          <li class="plus">Wide distribution: Ingram, Apple, Kobo, B&amp;N, Google</li>
+          <li class="plus">Full multi-page platform website</li>
+          <li class="plus">Universal buy-link hub, all retailers</li>
+          <li class="plus">CRM + 3 email automations</li>
+          <li class="plus">All socials connected + scheduling dashboard</li>
+          <li class="plus">Launch content pack (15 posts)</li>
+          <li class="plus">Publishing imprint + EIN filing</li>
+        </ul>
+      </div>
+      <div class="tier">
+        <h4>Tier 3 · Full Launch Suite</h4>
+        <div class="price">$8,950</div>
+        <div class="tagline">Everything in Tier 2, plus the campaign.</div>
+        <ul>
+          <li>Everything in Author Platform</li>
+          <li class="plus">30-day launch content calendar</li>
+          <li class="plus">Book trailer video (up to 60s)</li>
+          <li class="plus">Digital press kit + media outreach list</li>
+          <li class="plus">Amazon Ads + Meta Ads setup</li>
+          <li class="plus">60 days post-launch management</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Optional Add-ons</h3>
+    <div class="tablewrap"><table>
+      <tr><th>Add-on</th><th>Price</th></tr>
+      <tr><td>Ongoing growth management (social + CRM + ads)</td><td class="cost">$950/mo</td></tr>
+      <tr><td>Audiobook production management (ACX)</td><td class="cost">$750 + narration</td></tr>
+      <tr><td>Additional email automation sequences</td><td class="cost">$250 each</td></tr>
+      <tr><td>Extra content pack (15 posts)</td><td class="cost">$450</td></tr>
+      <tr><td>Blog / article ghostwriting</td><td class="cost">$200/article</td></tr>
+    </table></div>
+
+    <div class="note"><strong>Payment terms:</strong> 50% to begin, 50% at platform launch. Registration fees (~$250–$500) passed through at cost with receipts.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Next Steps</h2>
+    <ol class="steps">
+      <li><strong>Choose your tier</strong> — Tier 2 recommended for your platform + CRM goals.</li>
+      <li><strong>Sign + 50% deposit</strong> — project kickoff within 3 business days.</li>
+      <li><strong>Kickoff call</strong> — manuscript status, imprint name, domain name, brand assets.</li>
+      <li><strong>Week 1</strong> — registrations begin immediately.</li>
+    </ol>
+  </div>
+</section>
+
+<footer>
+  <div class="brand">Work Official LLC</div>
+  <div><a href="mailto:digi2uai@gmail.com">digi2uai@gmail.com</a></div>
+  <div style="margin-top:16px;opacity:.6">Proposal valid for 30 days · July 2026</div>
+</footer>
+
+</body>
+</html>
